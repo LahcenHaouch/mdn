@@ -39,18 +39,37 @@ scoreButton.addEventListener('click', () => {
 function run() {
   // Add your code here
   if (machineActive) {
-    if (score < 0 || score > 100) {
-      response = 'This is not possible, an error has occured.';
-    } else if (score >= 0 && score <= 19) {
-      response = 'That was a terrible score -- total fail!';
-    } else if (score >= 20 && score <= 39) {
-      response = 'You know some things, but it\'s a pretty bad score. Needs improvement.'
-    } else if (score >= 40 && score <= 69) {
-      response = 'You did a passable job, not bad!';
-    } else if (score >= 70 && score <= 89) {
-      response = 'That\'s a great score, you really know your stuff.';
-    } else {
-      response = 'What an amazing score! Did you cheat? Are you for real?';
+    // if (score < 0 || score > 100) {
+    //   response = 'This is not possible, an error has occured.';
+    // } else if (score >= 0 && score <= 19) {
+    //   response = 'That was a terrible score -- total fail!';
+    // } else if (score >= 20 && score <= 39) {
+    //   response = 'You know some things, but it\'s a pretty bad score. Needs improvement.'
+    // } else if (score >= 40 && score <= 69) {
+    //   response = 'You did a passable job, not bad!';
+    // } else if (score >= 70 && score <= 89) {
+    //   response = 'That\'s a great score, you really know your stuff.';
+    // } else {
+    //   response = 'What an amazing score! Did you cheat? Are you for real?';
+    // }
+    switch (true) {
+      case score < 0 || score > 100:
+        response = 'This is not possible, an error has occured.';
+        break;
+      case score >= 0 && score <= 19:
+        response = 'That was a terrible score -- total fail!';
+        break;
+      case score >= 20 && score <= 39:
+        response = 'You know some things, but it\'s a pretty bad score. Needs improvement.';
+        break;
+      case score >= 40 && score <= 69:
+        response = 'You did a passable job, not bad!';
+        break;
+      case score >= 70 && score <= 89:
+        response = 'That\'s a great score, you really know your stuff.';
+        break;
+      default:
+        response = 'What an amazing score! Did you cheat? Are you for real?';
     }
   } else {
     response = 'You need to switch the machine On!';
