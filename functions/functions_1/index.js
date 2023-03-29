@@ -4,8 +4,12 @@ const bodyElement = document.querySelector('body');
 const para = document.createElement('p');
 bodyElement.appendChild(para);
 
+function random(minBound, maxBound) {
+  return Math.floor(Math.random() * (maxBound - minBound) + minBound);
+}
+
 function chooseName(names) {
-  return names[Math.floor(Math.random() * names.length)];
+  return names[random(0, names.length)];
 }
 
 
