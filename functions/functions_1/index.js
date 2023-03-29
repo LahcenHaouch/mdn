@@ -12,7 +12,6 @@ function chooseName(names) {
   return names[random(0, names.length)];
 }
 
-
 const buttonElement = document.querySelector('button');
 buttonElement.addEventListener('click', () => {
   const randomName = chooseName(NAMES);
