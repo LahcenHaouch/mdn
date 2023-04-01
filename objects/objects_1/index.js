@@ -1,12 +1,8 @@
 function Cat(name, breed, color) {
-  return {
-    name,
-    breed,
-    color,
-    greeting() {
-      console.log(`Hello, said ${this.name} the ${this.breed}`);
-    }
-  }
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.greeting = () => console.log(`Hello, said ${this.name} the ${this.breed}`);
 }
 
 const cat = new Cat('Bertie', 'Cymric', 'white');
