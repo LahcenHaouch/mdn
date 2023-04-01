@@ -1,11 +1,15 @@
-const cat = {
-  name: 'Bertie',
-  breed: 'Cymric',
-  color: 'white',
-  greeting() {
-    console.log(`Hello, said ${this.name} the ${this.breed}`);
+function Cat(name, breed, color) {
+  return {
+    name,
+    breed,
+    color,
+    greeting() {
+      console.log(`Hello, said ${this.name} the ${this.breed}`);
+    }
   }
-};
+}
+
+const cat = new Cat('Bertie', 'Cymric', 'white');
 
 const para1 = document.createElement('p');
 const para2 = document.createElement('p');
