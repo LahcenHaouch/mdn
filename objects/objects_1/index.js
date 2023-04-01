@@ -3,7 +3,7 @@ const cat = {
   breed: 'Cymric',
   color: 'white',
   greeting() {
-    console.log('Meow!');
+    console.log(`Hello, said ${this.name} the ${this.breed}`);
   }
 };
 
