@@ -1,8 +1,13 @@
-function Cat(name, breed, color) {
-  this.name = name;
-  this.breed = breed;
-  this.color = color;
-  this.greeting = () => console.log(`Hello, said ${this.name} the ${this.breed}`);
+class Cat {
+  constructor(name, breed, color) {
+    this.name = name;
+    this.breed = breed;
+    this.color = color;
+  }
+
+  greeting() {
+    console.log(`Hello, sais ${this.name} the ${this.breed}`);
+  }
 }
 
 const cat = new Cat('Bertie', 'Cymric', 'white');
